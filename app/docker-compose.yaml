@@ -1,0 +1,14 @@
+services:
+  server:
+    build:
+      context: .
+    ports:
+      - "8000:5000"
+    environment:
+      - DOCKER_ENV=true
+    volumes:
+      - .:/app
+      - ./data:/app/data
+    working_dir: /app
+
+
